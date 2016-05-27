@@ -1,0 +1,42 @@
+<html layout:decorator="layout">
+
+<div layout:fragment="content" style="padding: 100px;">
+
+    <a class="btn btn-primary" href="/employee/add">Add new employee</a>
+
+    <table class="table table-striped" id="custs_list">
+        <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Age</th>
+            <th>E-mail</th>
+            <th>Phone Number</th>
+            <th>Salary</th>
+            <th>Department</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr data-th-each="emp : ${employers}">
+            <td class="message" data-th-text="${emp.firstName}"></td>
+            <td class="message" data-th-text="${emp.lastName}"></td>
+            <td class="message" data-th-text="${emp.age}"></td>
+            <td class="message" data-th-text="${emp.email}"></td>
+            <td class="message" data-th-text="${emp.phoneNumber}"></td>
+            <td class="message" data-th-text="${emp.salary}"></td>
+            <td class="message" data-th-text="${emp.department.name}"></td>
+
+            <td>
+                <a th:href="@{'/employee/{id}/edit'(id=${emp.id})}" class="edit">
+                    <span class="fa-stack">
+                        <i class="glyphicon glyphicon-edit"></i>
+                    </span>
+
+                </a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</html>

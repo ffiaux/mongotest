@@ -1,0 +1,8 @@
+com\ffiaux\model\Employee.class
+com\ffiaux\MongoTestApplication.class
+com\ffiaux\db\EmployeeRepository.class
+com\ffiaux\model\Message.class
+com\ffiaux\db\DepartmentRepository.class
+com\ffiaux\model\Department.class
+com\ffiaux\web\controllers\EmployeeController.class
+com\ffiaux\web\controllers\IndexController.class

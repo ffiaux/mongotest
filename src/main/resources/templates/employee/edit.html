@@ -1,0 +1,28 @@
+<html layout:decorator="layout" xmlns:th="http://www.thymeleaf.org">
+<div layout:fragment="content" style="padding: 100px;">
+    <form action="#" th:action="@{/employee/update}" th:object="${employee}" method="post">
+        <div class="form-group">
+            <input type="text" class="form-control" id="id" th:field="*{id}"/>
+
+            <label for="firstName">First Name</label>
+            <input type="text" class="form-control" id="firstName" th:field="*{firstName}"/>
+
+            <label for="firstName">Last Name</label>
+            <input type="text" class="form-control" id="lastName" th:field="*{lastName}"/>
+
+            <label for="age">Age</label>
+            <input type="text" class="form-control" id="age" th:field="*{age}"/>
+
+            <label for="email">E-mail</label>
+            <input type="text" class="form-control" id="email" th:field="*{email}"/>
+
+            <label for="phoneNumber">phone Number</label>
+            <input type="text" class="form-control" id="phoneNumber" th:field="*{phoneNumber}"/>
+
+            <label for="salary">Salary</label>
+            <input type="text" class="form-control" id="salary" th:field="*{salary}"/>
+        </div>
+        <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+</html>
